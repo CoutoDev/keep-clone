@@ -14,11 +14,6 @@ function mudaLayout() {
   const mural = document.querySelector('.mural');
   console.log('condicional do mudaLayout', mural.classList.contains('mural--linha'));
   mural.classList.toggle('mural--linha');
-  // if(mural.classList.contains('mural--linha')) {
-  //   mural.classList.remove('mural--linha');
-  // } else {
-  //   mural.classList.add('mural--linha');
-  // }
 }
 
 btnMudaLayout.addEventListener('click', mudaTexto)

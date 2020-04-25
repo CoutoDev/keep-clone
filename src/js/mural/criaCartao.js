@@ -3,8 +3,7 @@
 
 let contador = 0;
 
-function criaHTMLDoCartao(conteudo, cor) { // cria o template do cartão
-  // Copiem o HTML das Opções do cartão e coloqiuem nessa variável
+function criaHTMLDoCartao(conteudo, cor) { 
   const opcoesDoCartao = `
     <div class="opcoesDoCartao">
       <button class="opcoesDoCartao-remove opcoesDoCartao-opcao" tabindex="0">

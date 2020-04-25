@@ -23,7 +23,6 @@
       $formNovoCartaoConteudo.value = '';
     } else {
       // [Imperativa]
-      // <div class="formNovoCartao-msg">Digite algo por favor</div>
       const $msgErro = document.createElement('div');
       $msgErro.classList.add('formNovoCartao-msg');
       $msgErro.textContent = 'Por favor, preencha alguma coisa';
@@ -34,7 +33,6 @@
       $msgErro.addEventListener('animationend', function () {
         $msgErro.remove();
       });
-      // alert('Por favor, preencha alguma coisa');
     }
   });
 

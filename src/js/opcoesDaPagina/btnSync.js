@@ -15,7 +15,7 @@
         cor,
       }
       return cartaoProServer;
-    })
+    });
   
     console.log('[cartoesProServer]', cartoesProServer);
   });

@@ -9,12 +9,12 @@
 
 
     // const xhr = new XMLHttpRequest();
-    // // Verbo HTTP: GET, POST, DELETE, PATCH, PUT...
-    // // Status do HTTP: https://httpstatusdogs.com/
+    // Verbo HTTP: GET, POST, DELETE, PATCH, PUT...
+    // Status do HTTP: https://httpstatusdogs.com/
     // xhr.open('GET','https://ceep.herokuapp.com/cartoes/instrucoes');
     // xhr.send();
     // xhr.addEventListener('load', function() {
-    //   // JSON: JavaScript Object Notation
+    //   JSON: JavaScript Object Notation
     //   const respostaConvertida = JSON.parse(xhr.response);
     //   respostaConvertida.instrucoes.reverse().forEach(function (ajuda) {
     //     const $cartao = criaCartao(ajuda.conteudo, ajuda.cor);
@@ -27,7 +27,7 @@
     // AJAJ
     // Async JavaScript and JSON
 
-    // [Voltamos 16:00]
+  
     fetch('https://ceep.herokuapp.com/cartoes/instrucoes')
       .then(function (respostaDoServidor) {
         console.log('Chegou o primeiro pedaço', respostaDoServidor)
@@ -48,21 +48,9 @@
       })
       .catch(function () {
         console.log('Deu algum erro');
-        // https://medium.com/@omariosouto/entendendo-como-fazer-ajax-com-a-fetchapi-977ff20da3c6
       })
 
   });
 
   $btnAjuda.classList.remove('no-js');
 })();
-
-
-
-
-// class Ajuda {
-//   constructor(cor, conteudo) {
-//     this.cor = cor;
-//     this.conteudo = conteudo;
-//   }
-// }
-// new Ajuda('orange', 'Bem vindo!');
