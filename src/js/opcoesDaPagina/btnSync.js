@@ -16,6 +16,21 @@
       }
       return cartaoProServer;
     });
+    
+
+    fetch(`https://ceep.herokuapp.com/cartoes/salvar`, {
+      method: 'POST',
+      body: JSON.stringify({ usuario: 'c.fvitor@yahoo.com.br', cartoesProServer }),
+      headers: {
+          'content-type': 'application/json'
+      }
+      })
+      .then(function (data) { 
+        return data.json()	
+      })
+      .then(function (cartoes) { 
+        console.log(cartoes)
+      })
   
     console.log('[cartoesProServer]', cartoesProServer);
   });

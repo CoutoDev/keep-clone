@@ -14,8 +14,8 @@
     if(hasConteudo) {
       // [Declarativa] Template String - ES6
       const $mural = document.querySelector('.mural');
-      
-      const $cartao = criaCartao(conteudo)
+
+      const $cartao = criaCartao(conteudo);
       $mural.insertAdjacentElement(
         'afterbegin', $cartao
       );
