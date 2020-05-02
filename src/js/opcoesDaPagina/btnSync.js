@@ -17,19 +17,35 @@
       return cartaoProServer;
     });
     
+    const contratoDoServidor = { 
+      usuario: 'c.fvitor@yahoo.com.br', 
+      cartoes: cartoesProServer 
+    }
+
+    $btnSync.classList.add('botaoSync--esperando');
+    $btnSync.classList.remove('botaoSync--sincronizado');
 
     fetch(`https://ceep.herokuapp.com/cartoes/salvar`, {
       method: 'POST',
-      body: JSON.stringify({ usuario: 'c.fvitor@yahoo.com.br', cartoesProServer }),
       headers: {
           'content-type': 'application/json'
-      }
+      },
+      body: JSON.stringify(contratoDoServidor)
       })
-      .then(function (data) { 
-        return data.json()	
+      .then(function (response) { 
+        console.log('Request', response);
+        if(response.ok){
+          $btnSync.classList.add('botaoSync--sincronizado');
+          return;
+        }
+        throw new Error('Deu algum Problema');
       })
-      .then(function (cartoes) { 
-        console.log(cartoes)
+      .catch(()=>{
+        console.log('Deu algum Erro');
+        $btnSync.classList.add('botaoSync--deuRuim');
+      })
+      .finally(() => {
+        $btnSync.classList.remove('botaoSync--esperando');
       })
   
     console.log('[cartoesProServer]', cartoesProServer);
