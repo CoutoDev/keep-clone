@@ -5,30 +5,29 @@ class Contador extends Component {
   state = {
     valor: 0,
   };
-
   incrementa = () => {
+    // this.state.valor = this.state.valor + 1;
+    // this.render();
     this.setState({
       valor: this.state.valor + 1
     });
   }
-
   decrementa = () => {
     this.setState({
-      valor: this.setState.valor -1
+      valor: this.state.valor - 1
     });
   }
 
   render() {
-    console.log('Render foi chamado');
+    console.log('render foi chamado');
     return (
       <div>
         <p>Valor do contador: {this.state.valor}</p>
         <button onClick={this.incrementa}>Incrementar</button>
         <button onClick={this.decrementa}>Decrementar</button>
       </div>
-    )
+    );
   }
-
 }
 
 function Home() {
