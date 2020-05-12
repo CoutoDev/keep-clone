@@ -8,7 +8,7 @@
 
         $cartoes.forEach(($cartao) => {
             const conteudo = $cartao.querySelector('p').textContent;
-            const conteudoNormalizado = $cartao.toLowerCase();
+            const conteudoNormalizado = conteudo.toLowerCase();
             const valorDaBuscaNormalizado = valorDaBusca.toLowerCase().trim();
 
             if(conteudoNormalizado.includes(valorDaBuscaNormalizado)) {
